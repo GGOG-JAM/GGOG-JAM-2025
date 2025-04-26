@@ -40,7 +40,7 @@ public class statSystem : MonoBehaviour
             switch (currentHp, handler)
             {
                 case (90,0):
-                    bs.CoinFlip(); handler++; break;
+                    bs.CoinFlip(); CameraShake.Instance.Shake(0.3f, 1f); handler++; break;
                 case (80,1):
                     bs.SpinSlot(); handler++; break;
                 case (70,2):
