@@ -6,9 +6,7 @@ public class bossSkills : MonoBehaviour
 {
     statSystem statSystem;
 
-    public Image image1;
-    public Image image2;
-    public Image image3;
+    public GameObject[] slotObjes;
     public Sprite[] slotSprites;
 
 
@@ -67,19 +65,20 @@ public class bossSkills : MonoBehaviour
 
         public void SpinSlot()
     {
+        slotObjes[0].SetActive(false);
         StartCoroutine(Spin());
     }
     IEnumerator Spin()
     {
-        float duration = 2f;
+        float duration = 1.2f;
         float timer = 0f;
         while (timer < duration) {
-            image1.sprite = slotSprites[Random.Range(0, slotSprites.Length)];
-            image2.sprite = slotSprites[Random.Range(0, slotSprites.Length)];
-            image3.sprite = slotSprites[Random.Range(0, slotSprites.Length)];
+            slotObjes[1].GetComponent<SpriteRenderer>().sprite = slotSprites[Random.Range(0, slotSprites.Length)];
+            slotObjes[2].GetComponent<SpriteRenderer>().sprite = slotSprites[Random.Range(0, slotSprites.Length)];
+            slotObjes[3].GetComponent<SpriteRenderer>().sprite = slotSprites[Random.Range(0, slotSprites.Length)];
 
             timer += 0.1f;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         }
 
     }
