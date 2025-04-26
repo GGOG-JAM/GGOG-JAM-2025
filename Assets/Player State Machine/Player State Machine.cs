@@ -47,25 +47,25 @@ public class PlayerStateMachine : MonoBehaviour
 
         canDash = true;
 
-        currentState = new PlayerIdle();
+        
     }
 
     private void Start()
     {
-        currentState.OnStateEnter();
+        //Buranýn Nasýl Çalýþtýðýný Bilmiyorum.Movement Set Trigger Yapmazsam Bozuk Çalýþýyor
+        ChangeCurrentState(new PlayerIdle());
+        playerAnimator.SetTrigger("Movement");
     }
 
     public void ChangeCurrentState(BaseMovementState state)
     {
-        currentState.OnStateExit();
+        currentState?.OnStateExit();
         currentState = state;
         currentState.OnStateEnter();
     }
 
     private void Update()
     {
-        playerAnimator.SetFloat("Movement X", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.x);
-        playerAnimator.SetFloat("Movement Y", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.y);
 
         currentState.OnStateUpdate();
 

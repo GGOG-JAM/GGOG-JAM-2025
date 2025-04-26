@@ -19,6 +19,7 @@ public class PlayerIdle : BaseMovementState
 
         onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
         PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
+        
     }
 
 

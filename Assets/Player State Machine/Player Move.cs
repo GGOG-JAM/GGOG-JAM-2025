@@ -20,7 +20,6 @@ public class PlayerMove : BaseMovementState
         forcePower = PlayerStateMachine.instance.forcePower;
 
         onIdle = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
-        PlayerInputManager.instance.playerInput.Player.Movement.performed += onIdle;
         PlayerInputManager.instance.playerInput.Player.Movement.canceled += onIdle;
 
         onDash = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
@@ -69,7 +68,6 @@ public class PlayerMove : BaseMovementState
 
     public override void OnStateExit()
     {
-        PlayerInputManager.instance.playerInput.Player.Movement.performed -= onIdle;
         PlayerInputManager.instance.playerInput.Player.Movement.canceled -= onIdle;
         PlayerInputManager.instance.playerInput.Player.Dash.performed -= onDash;
         PlayerInputManager.instance.playerInput.Player.Attack.performed -= onAttack;
