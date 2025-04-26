@@ -24,9 +24,9 @@ public class PlayerInputManager : MonoBehaviour
         {
             playerInput = new PlayerInput();
             playerInput.Enable();
-            //playerInput.Player.Movement.started += i => { Debug.Log("started"); };
-            //playerInput.Player.Movement.performed += i => { Debug.Log("performed"); };
-            //playerInput.Player.Movement.canceled += i => { Debug.Log("canceled"); };
+            playerInput.Player.Movement.started += i => { Debug.Log("started"); };
+            playerInput.Player.Movement.performed += i => { Debug.Log("performed"); };
+            playerInput.Player.Movement.canceled += i => { Debug.Log("canceled"); };
         }
     }
 }

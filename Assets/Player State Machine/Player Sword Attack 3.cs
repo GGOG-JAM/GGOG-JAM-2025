@@ -12,7 +12,6 @@ public class PlayerSwordAttack3 : BaseMovementState
     public override void OnStateEnter()
     {
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Sword Attack 3");
-
         onAttack = i => { attack1Flag = true; };
         PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
 

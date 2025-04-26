@@ -11,7 +11,6 @@ public class PlayerIdle : BaseMovementState
     public override void OnStateEnter()
     {
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Idle");
-
         onMove = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
         PlayerInputManager.instance.playerInput.Player.Movement.started += onMove;
 
@@ -21,6 +20,7 @@ public class PlayerIdle : BaseMovementState
         onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
         PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
     }
+
 
     public override void OnStateExit()
     {

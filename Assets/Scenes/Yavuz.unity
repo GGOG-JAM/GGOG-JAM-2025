@@ -223,6 +223,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5674787297324699138, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+      propertyPath: dashTime
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674787297324699138, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+      propertyPath: timeBeforeNextDash
+      value: 0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 8634758021995070866, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2714313

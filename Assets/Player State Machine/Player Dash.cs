@@ -14,9 +14,9 @@ public class PlayerDash : BaseMovementState
 
     public override void OnStateEnter()
     {
+        PlayerStateMachine.instance.playerAnimator.SetTrigger("Dash");
         if (PlayerStateMachine.instance.canDash)
         {
-            PlayerStateMachine.instance.playerAnimator.SetTrigger("Dash");
 
             onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
             PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
