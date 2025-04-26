@@ -4,9 +4,11 @@ using UnityEngine;
 public class statSystem : MonoBehaviour
 {
     Rigidbody2D rb;
+    bossSkills bs;
 
     public float currentHp, maxHp;
     private float prevHp;
+    public int handler = 0; 
 
     public bool isPlayerAlive;
     public bool canGetDamage;
@@ -21,6 +23,7 @@ public class statSystem : MonoBehaviour
         canGetDamage = true;
 
         rb = GetComponent<Rigidbody2D>();
+        bs = GetComponent<bossSkills>();
     }
 
     private void Update()
@@ -34,6 +37,28 @@ public class statSystem : MonoBehaviour
         if (prevHp != currentHp)
         {
             isPlayerDead();
+            switch (currentHp, handler)
+            {
+                case (90,0):
+                    bs.CoinFlip(); handler++; break;
+                case (80,1):
+                    bs.SpinSlot(); handler++; break;
+                case (70,2):
+                    bs.PlayMineFarm(); handler++; break;
+                case (60,3):
+                    bs.CoinFlip(); handler++; break;
+                case (50,4):
+                    bs.SpinSlot(); handler++; break;
+                case (40,5):
+                    bs.PlayMineFarm(); handler++; break;
+                case (30,6):
+                    bs.CoinFlip(); handler++; break;
+                case (20,7):
+                    bs.CoinFlip(); handler++; break;
+                case (10,8):
+                    bs.CoinFlip(); handler++; break;
+
+            }
         }
     }
 
