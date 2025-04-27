@@ -29,7 +29,7 @@ public class Flux : MonoBehaviour
         }
     }
 
-    void CastSpell()
+    public void CastSpell()
     {
             Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
         int magicToCast = 1;
@@ -50,6 +50,7 @@ public class Flux : MonoBehaviour
                     StartCoroutine(RotateToTarget(magic.transform.rotation.eulerAngles.z, magic.transform.rotation.eulerAngles.z - 45, magic));
                         //   magic.transform.localScale = new Vector3(1, scaleX, 1);
 
+                    SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
                     }
                 }
             }
@@ -63,9 +64,9 @@ public class Flux : MonoBehaviour
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / duration); // 0-1 arasý normalleþtir
+            float t = Mathf.Clamp01(elapsedTime / duration); // 0-1 arasï¿½ normalleï¿½tir
 
-            // Smoothstep uygularsak daha doðal olur:
+            // Smoothstep uygularsak daha doï¿½al olur:
             t = t * t * (3f - 2f * t);
 
             float currentAngle = Mathf.LerpAngle(startAngle, targetAngle, t);
@@ -74,8 +75,9 @@ public class Flux : MonoBehaviour
             yield return null;
         }
 
-        // Tam hedef açýya sabitle
+        // Tam hedef aï¿½ï¿½ya sabitle
         magic.transform.rotation = Quaternion.Euler(0, 0, targetAngle);
+        Destroy(magic)
 
     }
 
