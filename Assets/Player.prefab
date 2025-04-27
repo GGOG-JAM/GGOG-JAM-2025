@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6476453352153462457}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.2714313, y: -0.33043504, z: 0.035905067}
-  m_LocalScale: {x: 1.42, y: 1.48, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 902440534103795893}
@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  forcePower: 10
+  forcePower: 20.38
   attackColliderPivotTransform: {fileID: 1938845674083225291}
   dashTime: 0.3
-  dashForce: 5
+  dashForce: 30
   dashDirection: {x: 0, y: 0}
   canDash: 0
   timeBeforeNextDash: 3
@@ -72,7 +72,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 1.35
+  m_LinearDamping: 3.35
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

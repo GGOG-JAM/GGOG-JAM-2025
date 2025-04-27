@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &112747971 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1916366710483529912, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+  m_PrefabInstance: {fileID: 647413819931614424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &254801741
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +216,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &449062636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 844821023287883188, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+  m_PrefabInstance: {fileID: 647413819931614424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &449062640
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449062636}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: db82810a3b966c34e941236d03c5b88c, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8527763461359869377, guid: db82810a3b966c34e941236d03c5b88c, type: 2}
+    value: {fileID: 112747971}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &647413819931614424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,9 +260,13 @@ PrefabInstance:
       propertyPath: timeBeforeNextDash
       value: 0.82
       objectReference: {fileID: 0}
+    - target: {fileID: 6476453352153462457, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+      propertyPath: m_LinearDamping
+      value: 3.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8634758021995070866, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2714313
+      value: 7.68
       objectReference: {fileID: 0}
     - target: {fileID: 8634758021995070866, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -274,7 +307,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 844821023287883188, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 449062640}
   m_SourcePrefab: {fileID: 100100000, guid: 3b87496f0fffb874781845edde5183dc, type: 3}
 --- !u!1001 &3672827821868703764
 PrefabInstance:

@@ -14,7 +14,7 @@ public class PlayerIdle : BaseMovementState
         onMove = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
         PlayerInputManager.instance.playerInput.Player.Movement.started += onMove;
 
-        onDash = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
+        onDash = i => { if (PlayerStateMachine.instance.canDash) PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection)); };
         PlayerInputManager.instance.playerInput.Player.Dash.performed += onDash;
 
         onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
