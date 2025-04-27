@@ -20,26 +20,28 @@ public class Flux : MonoBehaviour
     public LayerMask _damageLayer = 0;
 
     public GameObject _magicPrefab;
+    public GameObject enemiesInRange;
 
 
     public void CastSpell()
     {
-        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
-        int magicToCast = 1;
+        int magicToCast = 1 ;
 
             for (int i = 0; i < magicToCast; i++)
             {
-                if (enemiesInRange[i].gameObject.CompareTag("Player") && _canCast)
+                if (enemiesInRange.CompareTag("Player") && _canCast)
                 {
                     
                     Vector3 spawnposition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    Vector2 direction = enemiesInRange[i].gameObject.transform.position - spawnposition;
+                    Vector2 direction = enemiesInRange.transform.position - spawnposition;
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     //
                     {
                         GameObject magic = Instantiate(_magicPrefab, spawnposition, Quaternion.identity);
                         magic.transform.rotation = Quaternion.Euler(0, 0, angle + 120);
-                    StartCoroutine(RotateToTarget(magic.transform.rotation.eulerAngles.z, magic.transform.rotation.eulerAngles.z - 45, magic));
+
+                    elapsedTime = 0f;
+                    StartCoroutine(RotateToTarget(magic.transform.rotation.eulerAngles.z, magic.transform.rotation.eulerAngles.z - 15, magic));
                         //   magic.transform.localScale = new Vector3(1, scaleX, 1);
 
                     //SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
@@ -70,18 +72,5 @@ public class Flux : MonoBehaviour
         magic.transform.rotation = Quaternion.Euler(0, 0, targetAngle);
         Destroy(magic);
 
-    }
-
-    private IEnumerator Cooldown()
-    {
-        _canCast = false;
-        yield return new WaitForSeconds(_cooldown);
-        _canCast = true;
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, _damageRange);
     }
 }

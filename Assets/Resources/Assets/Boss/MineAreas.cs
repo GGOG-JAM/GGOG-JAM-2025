@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class MineAreas : MonoBehaviour
@@ -10,6 +11,8 @@ public class MineAreas : MonoBehaviour
     private bool playerInside;
     public Sprite[] mineSprites;
     public int var;
+    int a = 0;
+    public GameObject Mine;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,6 +42,7 @@ public class MineAreas : MonoBehaviour
                 OpenArea();
                 playerInside = false;
             }
+            if (a == 8) { StartCoroutine(durat()); }
         }
     }
     void OpenArea()
@@ -51,10 +55,18 @@ public class MineAreas : MonoBehaviour
 
             //SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
             source.Play();
+            StartCoroutine(durat());
         }
         else if (var == 1)
         {
+            a++;
             GetComponent<SpriteRenderer>().sprite = mineSprites[1];
         }
+    }
+
+    IEnumerator durat()
+    {
+        yield return new WaitForSeconds(1f);
+        Mine.SetActive(false);
     }
 }
