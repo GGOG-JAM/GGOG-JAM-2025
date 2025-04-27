@@ -19,13 +19,6 @@ public class RainSpell : MonoBehaviour
 
     private Transform _enemyTarget;
 
-    private void Update()
-    {
-        if (_canCast && _enemyTarget != null)
-        {
-            CastSpell();
-        }
-    }
 
     public void CastSpell()
     {
