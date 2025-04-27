@@ -16,6 +16,7 @@ public class PlayerMove : BaseMovementState
     public override void OnStateEnter()
     {
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Movement");
+
         rb = PlayerStateMachine.instance.rb;
         forcePower = PlayerStateMachine.instance.forcePower;
 

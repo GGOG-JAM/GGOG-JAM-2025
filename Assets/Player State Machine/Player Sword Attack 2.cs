@@ -12,6 +12,7 @@ public class PlayerSwordAttack2 : BaseMovementState
     public override void OnStateEnter()
     {
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Sword Attack 2");
+                PlayerStateMachine.instance.SpawnSlashSmoke();
         onAttack = i => { attack3Flag = true; };
         PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
 
@@ -32,7 +33,14 @@ public class PlayerSwordAttack2 : BaseMovementState
             }
             else
             {
-                PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
+                if (PlayerInputManager.instance.playerInput.Player.Movement.IsPressed())
+                {
+                    PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
+                }
+                else
+                {
+                    PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
+                }
             }
         }
     }
