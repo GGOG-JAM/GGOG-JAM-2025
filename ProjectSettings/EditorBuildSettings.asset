@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5d5d55212a6314e478e0fb8cdeddd451
+  - enabled: 1
     path: Assets/Scenes/Yavuz.unity
     guid: 2ad553d0437bd954ab6fff41336b6bb3
   m_configObjects:

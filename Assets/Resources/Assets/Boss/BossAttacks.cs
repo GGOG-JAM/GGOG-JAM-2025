@@ -8,14 +8,64 @@ public class BossAttacks : MonoBehaviour
     public float travelTime = 1f;
     public float arcHeight = 2f;
     public float accelerationCurve = 2f;
+    public float returnTime = 1f;
+
+
+    private Vector3 originalPosition;
+
+    public bool inFight;
+    public bool canCast;
+
+    Flux flux;
+    RainSpell spell;
+
+    int a = 4;
 
     /*private void Start()
     {
         ThrowDice();
     }*/
 
+    private void Start()
+    {
+        flux = GetComponentInChildren<Flux>();
+        spell = GetComponent<RainSpell>();
+    }
+
+
+
+    private void Update()
+    {
+        if (inFight && canCast)
+        {
+            StartCoroutine(Attack());
+        }
+    }
+    IEnumerator Attack()
+    {
+        canCast = false;
+        if (a %3 == 1)
+        {
+            ThrowDice();
+            a++;
+        }
+        else if (a %3 == 2)
+        {
+            spell.CastSpell();
+            a++;
+        }
+        else
+        {
+            flux.CastSpell();
+            a++;
+        }
+        yield return new WaitForSeconds(10f);
+        canCast = true;
+    }
+
     public void ThrowDice()
     {
+        originalPosition = dices[0].transform.position;
         Transform dice = dices[0].transform;
         StartCoroutine(MoveDiceAlongCurve(dice));
     }
@@ -61,5 +111,35 @@ public class BossAttacks : MonoBehaviour
         }
 
         CameraShake.Instance.Shake(0.3f, 0.2f);
+        ReturnDice();
+    }
+    public void ReturnDice()
+    {
+        if (dices.Length == 0) return;
+
+        Transform dice = dices[0].transform;
+        StartCoroutine(MoveDiceBack(dice));
+    }
+
+    private IEnumerator MoveDiceBack(Transform dice)
+    {
+        Vector3 startPos = dice.position;
+        Vector3 endPos = originalPosition;
+        float elapsed = 0f;
+
+        while (elapsed < returnTime)
+        {
+            elapsed += Time.deltaTime;
+
+            float t = Mathf.Clamp01(Mathf.Pow(elapsed / returnTime, accelerationCurve));
+
+            // Dümdüz, kavis yok
+            dice.position = Vector3.Lerp(startPos, endPos, t);
+
+            yield return null;
+        }
+
+        // Hareket bitince tam yerine oturt
+        dice.position = endPos;
     }
 }

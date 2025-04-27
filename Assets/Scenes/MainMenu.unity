@@ -148,7 +148,11 @@ RectTransform:
   m_GameObject: {fileID: 84848090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_LocalScale: {x: 0.15, y: 0.16, z: 1}
+=======
+  m_LocalScale: {x: 0.6, y: 0.58, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977901461}
@@ -264,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546ebc42829d7e63ea00ed8fbc9ec836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &135724487
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +717,11 @@ RectTransform:
   m_GameObject: {fileID: 571346470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_LocalScale: {x: 0.15, y: 0.16, z: 1}
+=======
+  m_LocalScale: {x: 0.6, y: 0.58, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977901461}
@@ -1048,7 +1057,11 @@ RectTransform:
   m_GameObject: {fileID: 898616586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_LocalScale: {x: 0.15, y: 0.16, z: 1}
+=======
+  m_LocalScale: {x: 0.6, y: 0.58, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977901461}
@@ -1101,7 +1114,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 898616589}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977901462}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &898616589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,6 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546ebc42829d7e63ea00ed8fbc9ec836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Yavuz
 --- !u!1 &1011944715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1323,11 @@ RectTransform:
   m_GameObject: {fileID: 1124876261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
   m_LocalScale: {x: 0.15, y: 0.16, z: 1}
+=======
+  m_LocalScale: {x: 0.6, y: 0.58, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977901461}
