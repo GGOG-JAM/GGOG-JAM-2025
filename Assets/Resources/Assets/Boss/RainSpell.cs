@@ -18,16 +18,6 @@ public class RainSpell : MonoBehaviour
 
     private Transform _enemyTarget;
 
-    private void Start()
-    {
-
-        Collider2D[] player = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
-        if (player != null)
-        {
-            _enemyTarget = player[0].transform;
-        }
-    }
-
     private void Update()
     {
         if (_canCast && _enemyTarget != null)
@@ -38,18 +28,28 @@ public class RainSpell : MonoBehaviour
 
     void CastSpell()
     {
+
+        Collider2D[] player = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
+        if (player != null)
+        {
+            _enemyTarget = player[0].transform;
+        }
+        if (_canCast)
+        {
             for (int i = 0; i < _magicCount; i++)
             {
                 Vector2 randomOffset = Random.insideUnitCircle * _spawnRadius;
                 Vector3 spawnPosition = _enemyTarget.position + new Vector3(randomOffset.x, randomOffset.y + 5f, 0);
 
                 GameObject magic = Instantiate(_magicPrefab, spawnPosition, Quaternion.identity);
-            magic.GetComponent<Rigidbody2D>().linearVelocity = -spawnPosition + new Vector3(spawnPosition.x, -5f, spawnPosition.y);
-            StartCoroutine(DestroyMagic(magic));
+                float abc = (spawnPosition - new Vector3(spawnPosition.x, -5f, spawnPosition.z)).magnitude;
+                magic.GetComponent<Rigidbody2D>().linearVelocity = -new Vector3(spawnPosition.x, abc, 0);
+                StartCoroutine(DestroyMagic(magic));
 
             }
 
             StartCoroutine(Cooldown());
+        }
     }
 
     private IEnumerator Cooldown()
