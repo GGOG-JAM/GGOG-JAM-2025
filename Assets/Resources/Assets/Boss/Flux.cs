@@ -46,7 +46,6 @@ public class Flux : MonoBehaviour
                     }
                 }
             }
-            StartCoroutine(Cooldown());
 
     }
 

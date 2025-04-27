@@ -10,6 +10,8 @@ public class BossAttacks : MonoBehaviour
     public float accelerationCurve = 2f;
     public float returnTime = 1f;
 
+    public float attackCd;
+
 
     private Vector3 originalPosition;
 
@@ -59,7 +61,7 @@ public class BossAttacks : MonoBehaviour
             flux.CastSpell();
             a++;
         }
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(attackCd);
         canCast = true;
     }
 

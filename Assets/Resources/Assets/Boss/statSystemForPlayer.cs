@@ -51,7 +51,6 @@ public class statSystemForPlayer : MonoBehaviour
     {
         if (currentHp <= 0)
         {
-            Flash();
             KillPlayer();
         }
     }
@@ -71,7 +70,7 @@ public class statSystemForPlayer : MonoBehaviour
             prevHp = currentHp;
             currentHp -= hasarMiktari;
             currentHp = Mathf.Clamp(currentHp, 0, maxHp);
-
+            Flash();
             isPlayerDead();
 
             timeSinceLastHit = Time.time - timeSinceLastHit;
