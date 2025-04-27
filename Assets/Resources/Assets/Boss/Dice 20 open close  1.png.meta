@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: d2dee5038355e8e4bbabd2255ad8502c
+guid: e44bd190c3a7ca24c9c040115e308489
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1086305619559993156
-    second: Dice 20 open close _0
+      213: -1934837978948469748
+    second: Dice 20 open close  1_0
   - first:
-      213: 1809309019973510278
-    second: Dice 20 open close _1
+      213: -3531462182279946374
+    second: Dice 20 open close  1_1
   - first:
-      213: -5301147974847767749
-    second: Dice 20 open close _2
+      213: 475396263733551766
+    second: Dice 20 open close  1_2
   - first:
-      213: -7632810351048186500
-    second: Dice 20 open close _3
+      213: -8129390746663049947
+    second: Dice 20 open close  1_3
   - first:
-      213: 2526427730217041515
-    second: Dice 20 open close _4
+      213: -1113606025133335862
+    second: Dice 20 open close  1_4
   - first:
-      213: -3508280967852962493
-    second: Dice 20 open close _5
+      213: -7444983861806838789
+    second: Dice 20 open close  1_5
   - first:
-      213: 8259358431264404274
-    second: Dice 20 open close _6
+      213: 1741846364995464704
+    second: Dice 20 open close  1_6
   - first:
-      213: 8299718221961299602
-    second: Dice 20 open close _7
+      213: -4872785712425108819
+    second: Dice 20 open close  1_7
   - first:
-      213: -7808899031663622910
-    second: Dice 20 open close _8
+      213: -8958812627244727195
+    second: Dice 20 open close  1_8
   - first:
-      213: -4966560004298588619
-    second: Dice 20 open close _9
+      213: 6437307040790011296
+    second: Dice 20 open close  1_9
   - first:
-      213: -7842247123727061071
-    second: Dice 20 open close _10
+      213: -4482267100656901274
+    second: Dice 20 open close  1_10
   - first:
-      213: 4712038069434072349
-    second: Dice 20 open close _11
+      213: 2712618714984433157
+    second: Dice 20 open close  1_11
   - first:
-      213: -4238186907167003108
-    second: Dice 20 open close _12
+      213: 4226733375237641676
+    second: Dice 20 open close  1_12
   - first:
-      213: 3908431936635463506
-    second: Dice 20 open close _13
+      213: 6414473677615465567
+    second: Dice 20 open close  1_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,24 +135,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dice 20 open close _0
+      name: Dice 20 open close  1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -165,16 +152,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f97e878ec97f08d4999151e90fd07556
-      internalID: 1688359906
+      spriteID: c0c77defb131625e0800000000000000
+      internalID: -1934837978948469748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _1
+      name: Dice 20 open close  1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -187,16 +174,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 322f6b81252b7f846839ea2de9d0864e
-      internalID: -584743627
+      spriteID: a7f5a7f0bd9bdfec0800000000000000
+      internalID: -3531462182279946374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _2
+      name: Dice 20 open close  1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -209,16 +196,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 78554d1e68bbcb2439f2b1851f06e18b
-      internalID: -2140830253
+      spriteID: 692e2631262f89600800000000000000
+      internalID: 475396263733551766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _3
+      name: Dice 20 open close  1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -231,16 +218,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7311e7c239bcb2545bd15f88daa26af5
-      internalID: 1498523588
+      spriteID: 5252dc0ff2a9e2f80800000000000000
+      internalID: -8129390746663049947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _4
+      name: Dice 20 open close  1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -253,16 +240,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7d7a38a5707a3f547b8663c72ed88071
-      internalID: 1348892973
+      spriteID: aca5134683dab80f0800000000000000
+      internalID: -1113606025133335862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _5
+      name: Dice 20 open close  1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -275,16 +262,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5f01c9597cc6d5142a22949ac2d905fd
-      internalID: -871843264
+      spriteID: bfbcc767f9a1ea890800000000000000
+      internalID: -7444983861806838789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _6
+      name: Dice 20 open close  1_6
       rect:
         serializedVersion: 2
         x: 384
@@ -297,16 +284,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 250d7b154b5fb524bbb8ad00cec16664
-      internalID: -1855029771
+      spriteID: 00e2cde4a084c2810800000000000000
+      internalID: 1741846364995464704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _7
+      name: Dice 20 open close  1_7
       rect:
         serializedVersion: 2
         x: 448
@@ -319,16 +306,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 52f29026069de074990b4f858bf2b622
-      internalID: 7702204
+      spriteID: daa7d403633606cb0800000000000000
+      internalID: -4872785712425108819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _8
+      name: Dice 20 open close  1_8
       rect:
         serializedVersion: 2
         x: 512
@@ -341,16 +328,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5422126dc3cbc8347989eb5393646133
-      internalID: 157471375
+      spriteID: 5644bcf9167eba380800000000000000
+      internalID: -8958812627244727195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _9
+      name: Dice 20 open close  1_9
       rect:
         serializedVersion: 2
         x: 576
@@ -363,16 +350,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5b3e3397487b5045b85b2abb19e3a9a
-      internalID: 238844425
+      spriteID: 0add864b5a8e55950800000000000000
+      internalID: 6437307040790011296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _10
+      name: Dice 20 open close  1_10
       rect:
         serializedVersion: 2
         x: 640
@@ -385,16 +372,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 888cb119208ccbc4cb639801335fe567
-      internalID: -1202610443
+      spriteID: 663ecece1d9cbc1c0800000000000000
+      internalID: -4482267100656901274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _11
+      name: Dice 20 open close  1_11
       rect:
         serializedVersion: 2
         x: 704
@@ -407,16 +394,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5451dde2adb0ad743b73a3bebdddf044
-      internalID: 2006172903
+      spriteID: 50649b5695825a520800000000000000
+      internalID: 2712618714984433157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _12
+      name: Dice 20 open close  1_12
       rect:
         serializedVersion: 2
         x: 768
@@ -429,16 +416,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6cf4518dbe42d8f4698cda6c134bd29c
-      internalID: 963406074
+      spriteID: cc5d35f4c9f58aa30800000000000000
+      internalID: 4226733375237641676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dice 20 open close _13
+      name: Dice 20 open close  1_13
       rect:
         serializedVersion: 2
         x: 832
@@ -451,10 +438,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 97058b54fae8b5c448cbdbf20160184e
-      internalID: -2071936162
+      spriteID: f540d5f03d9c40950800000000000000
+      internalID: 6414473677615465567
       vertices: []
       indices: 
       edges: []
@@ -463,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 79cd6e8129884b44f8e27199a81575fa
+    spriteID: 1476d9abc9d02b94fa4dcd5d17e27936
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dice 20 open close _0: 1688359906
-      Dice 20 open close _1: -584743627
-      Dice 20 open close _10: -1202610443
-      Dice 20 open close _11: 2006172903
-      Dice 20 open close _12: 963406074
-      Dice 20 open close _13: -2071936162
-      Dice 20 open close _2: -2140830253
-      Dice 20 open close _3: 1498523588
-      Dice 20 open close _4: 1348892973
-      Dice 20 open close _5: -871843264
-      Dice 20 open close _6: -1855029771
-      Dice 20 open close _7: 7702204
-      Dice 20 open close _8: 157471375
-      Dice 20 open close _9: 238844425
+      Dice 20 open close  1_0: -1934837978948469748
+      Dice 20 open close  1_1: -3531462182279946374
+      Dice 20 open close  1_10: -4482267100656901274
+      Dice 20 open close  1_11: 2712618714984433157
+      Dice 20 open close  1_12: 4226733375237641676
+      Dice 20 open close  1_13: 6414473677615465567
+      Dice 20 open close  1_2: 475396263733551766
+      Dice 20 open close  1_3: -8129390746663049947
+      Dice 20 open close  1_4: -1113606025133335862
+      Dice 20 open close  1_5: -7444983861806838789
+      Dice 20 open close  1_6: 1741846364995464704
+      Dice 20 open close  1_7: -4872785712425108819
+      Dice 20 open close  1_8: -8958812627244727195
+      Dice 20 open close  1_9: 6437307040790011296
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,88 @@
 fileFormatVersion: 2
-guid: d068e18fd2d70374b8e0514204899e81
+guid: 16884c4ca1c2a644e9f9ffb4b05c5115
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -914700546339960279
+    second: dice turn around 1_0
+  - first:
+      213: 8917475788330977201
+    second: dice turn around 1_1
+  - first:
+      213: -5680372695653203854
+    second: dice turn around 1_2
+  - first:
+      213: 1186255716315632969
+    second: dice turn around 1_3
+  - first:
+      213: 1063803059556562475
+    second: dice turn around 1_4
+  - first:
+      213: -3464925189341174489
+    second: dice turn around 1_5
+  - first:
+      213: -8641547319816925479
+    second: dice turn around 1_6
+  - first:
+      213: -1471391007438164431
+    second: dice turn around 1_7
+  - first:
+      213: -6531546986815748161
+    second: dice turn around 1_8
+  - first:
+      213: -783932420865521262
+    second: dice turn around 1_9
+  - first:
+      213: -5443631725614067219
+    second: dice turn around 1_10
+  - first:
+      213: -5964668244540839504
+    second: dice turn around 1_11
+  - first:
+      213: 7189690887707884051
+    second: dice turn around 1_12
+  - first:
+      213: 3069383974784247395
+    second: dice turn around 1_13
+  - first:
+      213: 8671500545224011674
+    second: dice turn around 1_14
+  - first:
+      213: 7469786464041833521
+    second: dice turn around 1_15
+  - first:
+      213: 7214861343770141810
+    second: dice turn around 1_16
+  - first:
+      213: -4960130312515787520
+    second: dice turn around 1_17
+  - first:
+      213: -4119369213439927471
+    second: dice turn around 1_18
+  - first:
+      213: 4366173974913301004
+    second: dice turn around 1_19
+  - first:
+      213: 2814395126130854565
+    second: dice turn around 1_20
+  - first:
+      213: -1244157295809093043
+    second: dice turn around 1_21
+  - first:
+      213: 7651962594777675310
+    second: dice turn around 1_22
+  - first:
+      213: -3293257328432786715
+    second: dice turn around 1_23
+  - first:
+      213: -3507480965762342939
+    second: dice turn around 1_24
+  - first:
+      213: -2863390503942445711
+    second: dice turn around 1_25
+  - first:
+      213: -4420515936436244263
+    second: dice turn around 1_26
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,24 +174,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dice turn around_0
+      name: dice turn around 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,16 +191,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f431c8e30e0e7754caa590a776e889fa
-      internalID: -1420332856
+      spriteID: 92a0d8b03b45e43f0800000000000000
+      internalID: -914700546339960279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_1
+      name: dice turn around 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,16 +213,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 131281ec4a21f62498e4f28973f0bae1
-      internalID: -374596565
+      spriteID: 1b74d909bfc31cb70800000000000000
+      internalID: 8917475788330977201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_2
+      name: dice turn around 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -167,16 +235,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: abefb751b10528640a96363725009bb0
-      internalID: -1556772317
+      spriteID: 27043c311234b21b0800000000000000
+      internalID: -5680372695653203854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_3
+      name: dice turn around 1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -189,16 +257,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ec2885da2a50ed64cb56f9394f5ec3b2
-      internalID: -1041698068
+      spriteID: 94515c7f94d667010800000000000000
+      internalID: 1186255716315632969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_4
+      name: dice turn around 1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -211,16 +279,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aecb3c253f92d9e48a5507ffa6cded41
-      internalID: 472321947
+      spriteID: b26b7d31f3363ce00800000000000000
+      internalID: 1063803059556562475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_5
+      name: dice turn around 1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -233,16 +301,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 249d4a556a919fb4cba5127c2dd6ebb0
-      internalID: 546882146
+      spriteID: 7252404f5ec1aefc0800000000000000
+      internalID: -3464925189341174489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_6
+      name: dice turn around 1_6
       rect:
         serializedVersion: 2
         x: 384
@@ -255,16 +323,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6d152a30c01d10c46b5b4a1c2680a595
-      internalID: 173553166
+      spriteID: 9de459c5f7e031880800000000000000
+      internalID: -8641547319816925479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_7
+      name: dice turn around 1_7
       rect:
         serializedVersion: 2
         x: 448
@@ -277,16 +345,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3b07ac1de19041b49a3377e4c33039fb
-      internalID: 769720080
+      spriteID: 13ea1fbaca1949be0800000000000000
+      internalID: -1471391007438164431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_8
+      name: dice turn around 1_8
       rect:
         serializedVersion: 2
         x: 512
@@ -299,16 +367,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5b74630c3882e504c94823fed6479488
-      internalID: 1406328435
+      spriteID: fb703110f984b55a0800000000000000
+      internalID: -6531546986815748161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_9
+      name: dice turn around 1_9
       rect:
         serializedVersion: 2
         x: 576
@@ -321,16 +389,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d57eec6d7482cde459f234dfe9749d90
-      internalID: 980606537
+      spriteID: 299066edd99ee15f0800000000000000
+      internalID: -783932420865521262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_10
+      name: dice turn around 1_10
       rect:
         serializedVersion: 2
         x: 640
@@ -343,16 +411,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 611c8c69ce66394498ff726f302192bc
-      internalID: 1401173860
+      spriteID: de11ab289c55474b0800000000000000
+      internalID: -5443631725614067219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_11
+      name: dice turn around 1_11
       rect:
         serializedVersion: 2
         x: 704
@@ -365,16 +433,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c4141d55c8ff2c3428d1dc14b1c9255d
-      internalID: -116828559
+      spriteID: 0b9271175dd393da0800000000000000
+      internalID: -5964668244540839504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_12
+      name: dice turn around 1_12
       rect:
         serializedVersion: 2
         x: 768
@@ -387,16 +455,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eafc1e5bd1f0464478eb1a24d0ff358e
-      internalID: -1443513947
+      spriteID: 31af0be05c9e6c360800000000000000
+      internalID: 7189690887707884051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_13
+      name: dice turn around 1_13
       rect:
         serializedVersion: 2
         x: 832
@@ -409,16 +477,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: afede5b1849e82f43aba696f9d017b0b
-      internalID: 271323780
+      spriteID: 366aa487674a89a20800000000000000
+      internalID: 3069383974784247395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_14
+      name: dice turn around 1_14
       rect:
         serializedVersion: 2
         x: 896
@@ -431,16 +499,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 02b3a6493aac7fc4eb5f89ded747b3ca
-      internalID: 1699936696
+      spriteID: a9feea36dcb575870800000000000000
+      internalID: 8671500545224011674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_15
+      name: dice turn around 1_15
       rect:
         serializedVersion: 2
         x: 960
@@ -453,16 +521,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e91b7ff9702a2ca4a86583a78f41ee97
-      internalID: -897797853
+      spriteID: 1341c3166330aa760800000000000000
+      internalID: 7469786464041833521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_16
+      name: dice turn around 1_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -475,16 +543,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4479d07b5e37f644ab5e3ef3e1a82426
-      internalID: -36171867
+      spriteID: 274ed1b8a26502460800000000000000
+      internalID: 7214861343770141810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_17
+      name: dice turn around 1_17
       rect:
         serializedVersion: 2
         x: 1088
@@ -497,16 +565,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aab56bc5296e8ea48a1b0a3e813eec03
-      internalID: 1831317216
+      spriteID: 00569dab2c31a2bb0800000000000000
+      internalID: -4960130312515787520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_18
+      name: dice turn around 1_18
       rect:
         serializedVersion: 2
         x: 1152
@@ -519,16 +587,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 528da39d623ac874bb3dd0c27320619f
-      internalID: 1026950423
+      spriteID: 15b9b36968f05d6c0800000000000000
+      internalID: -4119369213439927471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_19
+      name: dice turn around 1_19
       rect:
         serializedVersion: 2
         x: 1216
@@ -541,16 +609,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0f6ffee7f35d9e1478cada2d3f9596e7
-      internalID: 763300871
+      spriteID: c0a3342e814c79c30800000000000000
+      internalID: 4366173974913301004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_20
+      name: dice turn around 1_20
       rect:
         serializedVersion: 2
         x: 1280
@@ -563,16 +631,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 805181f23f5bb054ba3f22214c35137f
-      internalID: 2068634272
+      spriteID: 5aace96b47dbe0720800000000000000
+      internalID: 2814395126130854565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_21
+      name: dice turn around 1_21
       rect:
         serializedVersion: 2
         x: 1344
@@ -585,16 +653,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6b102c1fc19e3804897859ba89a97fac
-      internalID: -119085278
+      spriteID: d42a692088ddbbee0800000000000000
+      internalID: -1244157295809093043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dice turn around_22
+      name: dice turn around 1_22
       rect:
         serializedVersion: 2
         x: 1408
@@ -607,10 +675,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5ffba52f8e523b94c91508afaf1493e9
-      internalID: 632053759
+      spriteID: e26bc48207b313a60800000000000000
+      internalID: 7651962594777675310
       vertices: []
       indices: 
       edges: []
@@ -619,7 +687,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3a7d5bf3128604d47afd1015b9d8c4c4
+    spriteID: 0977da842828c0d47a2e6daf79f6e105
     internalID: 0
     vertices: []
     indices: 
@@ -629,29 +697,29 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dice turn around_0: -1420332856
-      dice turn around_1: -374596565
-      dice turn around_10: 1401173860
-      dice turn around_11: -116828559
-      dice turn around_12: -1443513947
-      dice turn around_13: 271323780
-      dice turn around_14: 1699936696
-      dice turn around_15: -897797853
-      dice turn around_16: -36171867
-      dice turn around_17: 1831317216
-      dice turn around_18: 1026950423
-      dice turn around_19: 763300871
-      dice turn around_2: -1556772317
-      dice turn around_20: 2068634272
-      dice turn around_21: -119085278
-      dice turn around_22: 632053759
-      dice turn around_3: -1041698068
-      dice turn around_4: 472321947
-      dice turn around_5: 546882146
-      dice turn around_6: 173553166
-      dice turn around_7: 769720080
-      dice turn around_8: 1406328435
-      dice turn around_9: 980606537
+      dice turn around 1_0: -914700546339960279
+      dice turn around 1_1: 8917475788330977201
+      dice turn around 1_10: -5443631725614067219
+      dice turn around 1_11: -5964668244540839504
+      dice turn around 1_12: 7189690887707884051
+      dice turn around 1_13: 3069383974784247395
+      dice turn around 1_14: 8671500545224011674
+      dice turn around 1_15: 7469786464041833521
+      dice turn around 1_16: 7214861343770141810
+      dice turn around 1_17: -4960130312515787520
+      dice turn around 1_18: -4119369213439927471
+      dice turn around 1_19: 4366173974913301004
+      dice turn around 1_2: -5680372695653203854
+      dice turn around 1_20: 2814395126130854565
+      dice turn around 1_21: -1244157295809093043
+      dice turn around 1_22: 7651962594777675310
+      dice turn around 1_3: 1186255716315632969
+      dice turn around 1_4: 1063803059556562475
+      dice turn around 1_5: -3464925189341174489
+      dice turn around 1_6: -8641547319816925479
+      dice turn around 1_7: -1471391007438164431
+      dice turn around 1_8: -6531546986815748161
+      dice turn around 1_9: -783932420865521262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
