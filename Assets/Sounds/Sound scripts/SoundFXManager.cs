@@ -5,6 +5,10 @@ public class SoundFXManager: MonoBehaviour
 {
     public static SoundFXManager instance;
 
+    [SerializeField] private AudioSource flux;
+    [SerializeField] private AudioSource Background;
+    [SerializeField] private AudioSource BossTheme;
+    [SerializeField] private AudioSource Mines;
     [SerializeField] private AudioSource soundFXObject;
 
     private void Awake()
