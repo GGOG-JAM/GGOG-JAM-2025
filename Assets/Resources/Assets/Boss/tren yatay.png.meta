@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tren yatay_0: -3659109273030246471
+      tren yatay_1: -3487269549157599283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
