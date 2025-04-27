@@ -33,7 +33,11 @@ public class PlayerSwordAttack2 : BaseMovementState
             }
             else
             {
-                if (PlayerInputManager.instance.playerInput.Player.Movement.IsPressed())
+                if (PlayerInputManager.instance.playerInput.Player.Dash.IsPressed() && PlayerStateMachine.instance.canDash)
+                {
+                    PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
+                }
+                else if (PlayerInputManager.instance.playerInput.Player.Movement.IsPressed())
                 {
                     PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
                 }
