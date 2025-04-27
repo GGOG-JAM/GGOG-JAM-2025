@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tren dikey_0: -6066844251114458470
+      tren dikey_1: -6965755211713677065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
