@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MineAreas : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip clip;
 
     private float timeInsideArea = 0f;
     public float openTime = 2f;
@@ -44,6 +46,11 @@ public class MineAreas : MonoBehaviour
         if (var == 0)
         {
             GetComponent<SpriteRenderer>().sprite = mineSprites[0];
+
+            source.clip = clip;
+
+            //SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
+            source.Play();
         }
         else if (var == 1)
         {
