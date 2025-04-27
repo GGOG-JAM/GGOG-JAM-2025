@@ -4,6 +4,8 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class Flux : MonoBehaviour
 {
+    public AudioSource source; 
+    public AudioClip clip;
 
     public int _damage = 10;
     public float _cooldown = 1f;
@@ -36,9 +38,10 @@ public class Flux : MonoBehaviour
             {
                 if (enemiesInRange[i].gameObject.CompareTag("Player") && _canCast)
                 {
+                    
                     Vector3 spawnposition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     Vector2 direction = enemiesInRange[i].gameObject.transform.position - spawnposition;
-
+                    source.PlayOneShot(clip);
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     //
                     {
