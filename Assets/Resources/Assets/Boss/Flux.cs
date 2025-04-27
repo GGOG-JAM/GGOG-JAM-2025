@@ -31,7 +31,7 @@ public class Flux : MonoBehaviour
 
     public void CastSpell()
     {
-            Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
         int magicToCast = 1;
 
             for (int i = 0; i < magicToCast; i++)
@@ -41,7 +41,6 @@ public class Flux : MonoBehaviour
                     
                     Vector3 spawnposition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     Vector2 direction = enemiesInRange[i].gameObject.transform.position - spawnposition;
-                    source.PlayOneShot(clip);
                     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     //
                     {
@@ -50,7 +49,7 @@ public class Flux : MonoBehaviour
                     StartCoroutine(RotateToTarget(magic.transform.rotation.eulerAngles.z, magic.transform.rotation.eulerAngles.z - 45, magic));
                         //   magic.transform.localScale = new Vector3(1, scaleX, 1);
 
-                    SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
+                    //SoundFXManager.instance.PlaySoundFXClip(clip,transform,1f);
                     }
                 }
             }
@@ -77,7 +76,7 @@ public class Flux : MonoBehaviour
 
         // Tam hedef a��ya sabitle
         magic.transform.rotation = Quaternion.Euler(0, 0, targetAngle);
-        Destroy(magic)
+        Destroy(magic);
 
     }
 
