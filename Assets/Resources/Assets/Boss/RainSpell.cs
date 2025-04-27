@@ -15,18 +15,12 @@ public class RainSpell : MonoBehaviour
     public LayerMask _damageLayer = 0;
 
     public GameObject _magicPrefab;
+    public Sprite[] Bullets;
 
     private Transform _enemyTarget;
 
-    private void Update()
-    {
-        if (_canCast && _enemyTarget != null)
-        {
-            CastSpell();
-        }
-    }
 
-    void CastSpell()
+    public void CastSpell()
     {
 
         Collider2D[] player = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
@@ -40,15 +34,16 @@ public class RainSpell : MonoBehaviour
             {
                 Vector2 randomOffset = Random.insideUnitCircle * _spawnRadius;
                 Vector3 spawnPosition = _enemyTarget.position + new Vector3(randomOffset.x, randomOffset.y + 5f, 0);
-
+                int x = Random.Range(0, Bullets.Length);
                 GameObject magic = Instantiate(_magicPrefab, spawnPosition, Quaternion.identity);
+                magic.GetComponent<SpriteRenderer>().sprite = Bullets[x];
                 float abc = (spawnPosition - new Vector3(spawnPosition.x, -5f, spawnPosition.z)).magnitude;
                 magic.GetComponent<Rigidbody2D>().linearVelocity = -new Vector3(spawnPosition.x, abc, 0);
                 StartCoroutine(DestroyMagic(magic));
 
             }
 
-            StartCoroutine(Cooldown());
+            //StartCoroutine(Cooldown());
         }
     }
 

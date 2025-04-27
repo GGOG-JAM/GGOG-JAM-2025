@@ -24,23 +24,24 @@ public class CameraShake : MonoBehaviour
 
     void Update()
     {
+        originalPosition = transform.localPosition;
         if (shakeDuration > 0)
         {
-            GetComponent<followPlayer>().enabled = false;
+
             transform.localPosition = originalPosition + Random.insideUnitSphere * shakeMagnitude;
             shakeDuration -= Time.deltaTime * dampingSpeed;
         }
         else
         {
-            GetComponent<followPlayer>().enabled = false;
+            GetComponent<followPlayer>().enabled = true;
             shakeDuration = 0f;
-            transform.localPosition = originalPosition;
         }
     }
 
     // CameraShake.Instance.Shake(0.3f, 0.2f);
     public void Shake(float duration, float magnitude)
     {
+
         shakeDuration = duration;
         shakeMagnitude = magnitude;
     }

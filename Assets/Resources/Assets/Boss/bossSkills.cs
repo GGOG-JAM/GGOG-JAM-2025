@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public class bossSkills : MonoBehaviour
 {
+
+    public AudioSource sourceslot;
+    public AudioClip clipslot;
+    public AudioSource sourceyazi;
+    public AudioClip clipyazi;
+
     statSystem statSystem;
 
     public GameObject[] slotObjes;
@@ -35,6 +41,9 @@ public class bossSkills : MonoBehaviour
     public void CoinFlip() 
     {
         coinF.SetActive(true);
+        sourceyazi.clip = clipyazi;
+        sourceyazi.Play();
+
         coinAnim = coinF.GetComponent<Animator>();
         StartCoroutine(FlipRoutine());
 
@@ -67,6 +76,9 @@ public class bossSkills : MonoBehaviour
     }
     IEnumerator Spin()
     {
+        sourceslot.clip = clipslot;
+        sourceslot.Play();
+
         float duration = 1.2f;
         float timer = 0f;
         while (timer < duration) {
@@ -82,7 +94,7 @@ public class bossSkills : MonoBehaviour
 
     public void PlayMineFarm()
     {
-        Debug.Log("Farm Baþlsýn");
+        Debug.Log("Farm Baï¿½lsï¿½n");
         SetUpMineObjs();
         SetUpMineFarm();
     }

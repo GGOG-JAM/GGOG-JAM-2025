@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: f7cf79304c50b854f9879389a9995311
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7438259532114470571
+    second: atk 3slh-Sheet 1_0
+  - first:
+      213: 5924889679515850764
+    second: atk 3slh-Sheet 1_1
+  - first:
+      213: 4333331573924714260
+    second: atk 3slh-Sheet 1_2
+  - first:
+      213: 2913840475118067844
+    second: atk 3slh-Sheet 1_3
+  - first:
+      213: 7824192449228440203
+    second: atk 3slh-Sheet 1_4
+  - first:
+      213: 607405292400296573
+    second: atk 3slh-Sheet 1_5
+  - first:
+      213: -3371554887483156198
+    second: atk 3slh-Sheet 1_6
+  - first:
+      213: -5970154712534619505
+    second: atk 3slh-Sheet 1_7
+  - first:
+      213: 623873603871399188
+    second: atk 3slh-Sheet 1_8
+  - first:
+      213: -5502690368007592058
+    second: atk 3slh-Sheet 1_9
+  - first:
+      213: -7532496251816193335
+    second: atk 3slh-Sheet 1_10
+  - first:
+      213: -5008201927929197988
+    second: atk 3slh-Sheet 1_11
+  - first:
+      213: 4155827496438810483
+    second: atk 3slh-Sheet 1_12
+  - first:
+      213: -8126275669506935037
+    second: atk 3slh-Sheet 1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 28
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55957297d5ef5c890800000000000000
+      internalID: -7438259532114470571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 29
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c089be8a5cf693250800000000000000
+      internalID: 5924889679515850764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 21
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41754c58b16132c30800000000000000
+      internalID: 4333331573924714260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 19
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4806193597a007820800000000000000
+      internalID: 2913840475118067844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 11
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b820e86049d159c60800000000000000
+      internalID: 7824192449228440203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 30
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72463035efed6800800000000000000
+      internalID: 607405292400296573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 21
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1995de61b4d531d0800000000000000
+      internalID: -3371554887483156198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 5
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8aef319befb52da0800000000000000
+      internalID: -5970154712534619505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 22
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41d5f7fbcb178a800800000000000000
+      internalID: 623873603871399188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 12
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687a1f9c34482a3b0800000000000000
+      internalID: -5502690368007592058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 6
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2d88e5192377790800000000000000
+      internalID: -7532496251816193335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 9
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a8a5291ea4f7ab0800000000000000
+      internalID: -5008201927929197988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 12
+        width: 109
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3774909e6177ca930800000000000000
+      internalID: 4155827496438810483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atk 3slh-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 13
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307b32c555ba93f80800000000000000
+      internalID: -8126275669506935037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      atk 3slh-Sheet 1_0: -7438259532114470571
+      atk 3slh-Sheet 1_1: 5924889679515850764
+      atk 3slh-Sheet 1_10: -7532496251816193335
+      atk 3slh-Sheet 1_11: -5008201927929197988
+      atk 3slh-Sheet 1_12: 4155827496438810483
+      atk 3slh-Sheet 1_13: -8126275669506935037
+      atk 3slh-Sheet 1_2: 4333331573924714260
+      atk 3slh-Sheet 1_3: 2913840475118067844
+      atk 3slh-Sheet 1_4: 7824192449228440203
+      atk 3slh-Sheet 1_5: 607405292400296573
+      atk 3slh-Sheet 1_6: -3371554887483156198
+      atk 3slh-Sheet 1_7: -5970154712534619505
+      atk 3slh-Sheet 1_8: 623873603871399188
+      atk 3slh-Sheet 1_9: -5502690368007592058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

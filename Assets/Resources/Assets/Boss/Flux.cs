@@ -21,13 +21,6 @@ public class Flux : MonoBehaviour
 
     public GameObject _magicPrefab;
 
-    private void Update()
-    {
-        if (_canCast)
-        {
-            CastSpell();
-        }
-    }
 
     public void CastSpell()
     {
@@ -53,7 +46,6 @@ public class Flux : MonoBehaviour
                     }
                 }
             }
-            StartCoroutine(Cooldown());
 
     }
 
