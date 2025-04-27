@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class statSystem : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class statSystem : MonoBehaviour
 
     private float timeSinceLastHit = 0f;
 
+    float percent;
+    public Image healthbar;
+
     void Start()
     {
         currentHp = maxHp;
@@ -29,6 +33,10 @@ public class statSystem : MonoBehaviour
     private void Update()
     {
         isHpChange();
+        percent = currentHp * 100 / maxHp;
+        float v = 10 * (percent) / 100;
+        Vector3 targetScale = new Vector3(v, 0.4f, 1f);
+        healthbar.rectTransform.localScale = targetScale;
     }
 
     void isHpChange()

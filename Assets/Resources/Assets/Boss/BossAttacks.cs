@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class BossAttacks : MonoBehaviour
 {
+
+    public AudioSource sourceslot;
+    public AudioClip clipslot;
+
     public GameObject[] dices;
     public Transform player;
     public float travelTime = 1f;
@@ -49,6 +53,8 @@ public class BossAttacks : MonoBehaviour
         if (a %3 == 1)
         {
             ThrowDice();
+            sourceslot.clip = clipslot;
+            sourceslot.Play();
             a++;
         }
         else if (a %3 == 2)
