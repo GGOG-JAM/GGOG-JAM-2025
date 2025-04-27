@@ -24,8 +24,6 @@ public class bossSkills : MonoBehaviour
 
 
 
-
-
     private void Start()
     {
         statSystem = GetComponent<statSystem>();
@@ -45,7 +43,6 @@ public class bossSkills : MonoBehaviour
 
     IEnumerator FlipRoutine()
     {
-        // 1. Animasyonu 2 kez oynat
         for (int i = 0; i < 2; i++)
         {
             coinAnim.enabled = true;
@@ -65,7 +62,7 @@ public class bossSkills : MonoBehaviour
 
         public void SpinSlot()
     {
-        slotObjes[0].SetActive(false);
+        slotObjes[0].SetActive(true);
         StartCoroutine(Spin());
     }
     IEnumerator Spin()
