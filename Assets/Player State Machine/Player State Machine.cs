@@ -28,6 +28,10 @@ public class PlayerStateMachine : MonoBehaviour
     [HideInInspector] public BaseMovementState currentState;
 
     [HideInInspector] public Animator playerAnimator;
+
+    [Header("Smoke Object References")]
+    public GameObject smokeObject;
+    public float smokeObjectVelocity;
     
 
     private void Awake()
@@ -68,13 +72,23 @@ public class PlayerStateMachine : MonoBehaviour
     {
 
         currentState.OnStateUpdate();
+        playerAnimator.SetFloat("Movement X", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.x);
+        playerAnimator.SetFloat("Movement Y", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.y);
 
-        
+
     }
 
     public void CallDashCourotine(float time)
     {
         StartCoroutine(WaitForNextDash(time));
+    }
+
+    public void SpawnSlashSmoke()
+    {
+        GameObject smokeObjectInstantiate = Instantiate(smokeObject,GetComponentInChildren<BoxCollider2D>().transform.position, attackColliderPivotTransform.transform.rotation);
+        Rigidbody2D smokeRB = smokeObjectInstantiate.GetComponent<Rigidbody2D>();
+        smokeRB.linearVelocity = smokeRB.transform.up * smokeObjectVelocity * Time.fixedDeltaTime;
+        Destroy(smokeObjectInstantiate, 0.7f);
     }
 
     private IEnumerator WaitForNextDash(float time)
