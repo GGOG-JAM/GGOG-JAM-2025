@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class BossAttacks : MonoBehaviour
 {
+    public AudioSource sourceyazi;
+    public AudioClip clipyazi;
+
     public GameObject[] dices;
     public Transform player;
     public float travelTime = 1f;
@@ -49,6 +52,8 @@ public class BossAttacks : MonoBehaviour
         if (a %3 == 1)
         {
             ThrowDice();
+            sourceyazi.clip = clipyazi;
+            sourceyazi.Play();
             a++;
         }
         else if (a %3 == 2)
@@ -135,7 +140,7 @@ public class BossAttacks : MonoBehaviour
 
             float t = Mathf.Clamp01(Mathf.Pow(elapsed / returnTime, accelerationCurve));
 
-            // Dümdüz, kavis yok
+            // Dï¿½mdï¿½z, kavis yok
             dice.position = Vector3.Lerp(startPos, endPos, t);
 
             yield return null;
