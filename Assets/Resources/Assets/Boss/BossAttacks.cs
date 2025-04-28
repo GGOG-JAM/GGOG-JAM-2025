@@ -3,8 +3,12 @@ using UnityEngine;
 
 public class BossAttacks : MonoBehaviour
 {
-    public AudioSource sourceyazi;
-    public AudioClip clipyazi;
+
+
+
+    public AudioSource sourceslot;
+    public AudioClip clipslot;
+
 
     public GameObject[] dices;
     public Transform player;
@@ -36,7 +40,15 @@ public class BossAttacks : MonoBehaviour
         flux = GetComponentInChildren<Flux>();
         spell = GetComponent<RainSpell>();
     }
-
+    private void Awake()
+    {
+        StartCoroutine(canCst());
+    }
+    IEnumerator canCst()
+    {
+        yield return new WaitForSeconds(1.5f);
+        canCast = true;
+    }
 
 
     private void Update()
@@ -52,16 +64,19 @@ public class BossAttacks : MonoBehaviour
         if (a %3 == 1)
         {
             ThrowDice();
-            sourceyazi.clip = clipyazi;
-            sourceyazi.Play();
+
+
+            sourceslot.clip = clipslot;
+            sourceslot.Play();
+
             a++;
         }
-        else if (a %3 == 2)
+        else if (a%3 == 2)
         {
             spell.CastSpell();
             a++;
         }
-        else
+        else if (a % 3 == 0)
         {
             flux.CastSpell();
             a++;

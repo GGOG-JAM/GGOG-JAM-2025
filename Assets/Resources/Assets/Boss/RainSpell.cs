@@ -17,7 +17,7 @@ public class RainSpell : MonoBehaviour
     public GameObject _magicPrefab;
     public Sprite[] Bullets;
 
-    private Transform _enemyTarget;
+    public Transform _enemyTarget;
 
 
     public void CastSpell()
@@ -26,24 +26,23 @@ public class RainSpell : MonoBehaviour
         Collider2D[] player = Physics2D.OverlapCircleAll(transform.position, _damageRange, _damageLayer);
         if (player != null)
         {
-            _enemyTarget = player[0].transform;
-        }
-        if (_canCast)
-        {
-            for (int i = 0; i < _magicCount; i++)
+            if (_canCast)
             {
-                Vector2 randomOffset = Random.insideUnitCircle * _spawnRadius;
-                Vector3 spawnPosition = _enemyTarget.position + new Vector3(randomOffset.x, randomOffset.y + 5f, 0);
-                int x = Random.Range(0, Bullets.Length);
-                GameObject magic = Instantiate(_magicPrefab, spawnPosition, Quaternion.identity);
-                magic.GetComponent<SpriteRenderer>().sprite = Bullets[x];
-                float abc = (spawnPosition - new Vector3(spawnPosition.x, -5f, spawnPosition.z)).magnitude;
-                magic.GetComponent<Rigidbody2D>().linearVelocity = -new Vector3(spawnPosition.x, abc, 0);
-                StartCoroutine(DestroyMagic(magic));
+                for (int i = 0; i < _magicCount; i++)
+                {
+                    Vector2 randomOffset = Random.insideUnitCircle * _spawnRadius;
+                    Vector3 spawnPosition = _enemyTarget.position + new Vector3(randomOffset.x, randomOffset.y + 5f, 0);
+                    int x = Random.Range(0, Bullets.Length);
+                    GameObject magic = Instantiate(_magicPrefab, spawnPosition, Quaternion.identity);
+                    magic.GetComponent<SpriteRenderer>().sprite = Bullets[x];
+                    float abc = (spawnPosition - new Vector3(spawnPosition.x, -5f, spawnPosition.z)).magnitude;
+                    magic.GetComponent<Rigidbody2D>().linearVelocity = -new Vector3(spawnPosition.x, abc, 0);
+                    StartCoroutine(DestroyMagic(magic));
 
+                }
+
+                //StartCoroutine(Cooldown());
             }
-
-            //StartCoroutine(Cooldown());
         }
     }
 

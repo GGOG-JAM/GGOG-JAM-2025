@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class bossSkills : MonoBehaviour
 {
+    playerMain player;
 
     public AudioSource sourceslot;
     public AudioClip clipslot;
@@ -27,11 +28,20 @@ public class bossSkills : MonoBehaviour
     //    public int mineCount, winCount;
     public GameObject[] mineFarmObjSolo;
     public GameObject[,] mineFarmObj = new GameObject[3,3];
+    public GameObject Mine;
+    public Transform yer;
+    public Sprite minedef;
+
+
+    public GameObject magicPrefab;
+    public GameObject shin;
+    public bool cheat;
 
 
 
     private void Start()
     {
+        player = FindAnyObjectByType<playerMain>();
         statSystem = GetComponent<statSystem>();
     }
 
@@ -52,26 +62,89 @@ public class bossSkills : MonoBehaviour
 
     IEnumerator FlipRoutine()
     {
-        for (int i = 0; i < 2; i++)
+        if (cheat)
         {
-            coinAnim.enabled = true;
-            yield return new WaitForSeconds(animDuration);
-        }
-        coinAnim.enabled = false;
-        coinFlipRes = Random.Range(0, 2);
-        if (coinFlipRes == 0)
-        {
-            coinF.GetComponent<SpriteRenderer>().sprite = flipSprites[0];
+            for (int i = 0; i < 2; i++)
+            {
+                coinAnim.enabled = true;
+                yield return new WaitForSeconds(animDuration);
+            }
+            coinAnim.enabled = false;
+            coinFlipRes = 0;
+            coinF.GetComponent<SpriteRenderer>().sprite = flipSprites[1];
+
+            Vector3 centerPos = player.transform.position;
+
+            // 4 yönde pozisyonlar
+            Vector3[] spawnPositions = new Vector3[]
+            {
+            centerPos + new Vector3(0, 1, 0),   // Yukarý
+            centerPos + new Vector3(0, -1, 0),  // Aþaðý
+            centerPos + new Vector3(1, 0, 0),   // Saða
+            centerPos + new Vector3(-1, 0, 0)   // Sola
+            };
+
+            foreach (Vector3 spawnPos in spawnPositions)
+            {
+                // Spawnla
+                GameObject spawned = Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                StartCoroutine(dest(spawned));
+
+                // Karaktere doðru dönsün
+                Vector3 direction = centerPos - spawnPos;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                spawned.transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+
         }
         else
         {
-            coinF.GetComponent<SpriteRenderer>().sprite = flipSprites[1];
+            for (int i = 0; i < 2; i++)
+            {
+                coinAnim.enabled = true;
+                yield return new WaitForSeconds(animDuration);
+            }
+            coinAnim.enabled = false;
+            coinFlipRes = Random.Range(0, 2);
+            if (coinFlipRes == 0)
+            {
+                coinF.GetComponent<SpriteRenderer>().sprite = flipSprites[0];
+                shin.SetActive(true);
+            }
+            else
+            {
+                coinF.GetComponent<SpriteRenderer>().sprite = flipSprites[1];
+                Vector3 centerPos = player.transform.position;
+
+                // 4 yönde pozisyonlar
+                Vector3[] spawnPositions = new Vector3[]
+                {
+            centerPos + new Vector3(0, 1, 0),   // Yukarý
+            centerPos + new Vector3(0, -1, 0),  // Aþaðý
+            centerPos + new Vector3(1, 0, 0),   // Saða
+            centerPos + new Vector3(-1, 0, 0)   // Sola
+                };
+
+                foreach (Vector3 spawnPos in spawnPositions)
+                {
+                    // Spawnla
+                    GameObject spawned = Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                    StartCoroutine(dest(spawned));
+
+                    // Karaktere doðru dönsün
+                    Vector3 direction = centerPos - spawnPos;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    spawned.transform.rotation = Quaternion.Euler(0, 0, angle);
+                }
+            }
         }
+        StartCoroutine(durat(coinF));
     }
 
-        public void SpinSlot()
+    public void SpinSlot()
     {
         slotObjes[0].SetActive(true);
+        slotObjes[0].GetComponent<Animator>().enabled = true;
         StartCoroutine(Spin());
     }
     IEnumerator Spin()
@@ -89,12 +162,96 @@ public class bossSkills : MonoBehaviour
             timer += 0.1f;
             yield return new WaitForSeconds(0.3f);
         }
+        if (slotObjes[1].GetComponent<SpriteRenderer>().sprite == slotObjes[2].GetComponent<SpriteRenderer>().sprite && slotObjes[1].GetComponent<SpriteRenderer>().sprite == slotObjes[3].GetComponent<SpriteRenderer>().sprite)
+        {
+            Vector3 centerPos = player.transform.position;
+
+            // 4 yönde pozisyonlar
+            Vector3[] spawnPositions = new Vector3[]
+            {
+            centerPos + new Vector3(0, 1, 0),   // Yukarý
+            centerPos + new Vector3(0, -1, 0),  // Aþaðý
+            centerPos + new Vector3(1, 0, 0),   // Saða
+            centerPos + new Vector3(-1, 0, 0)   // Sola
+            };
+
+            foreach (Vector3 spawnPos in spawnPositions)
+            {
+                // Spawnla
+                GameObject spawned = Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                StartCoroutine(dest(spawned));
+
+                // Karaktere doðru dönsün
+                Vector3 direction = centerPos - spawnPos;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                spawned.transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+        }
+        else
+        {
+            if (cheat)
+            {
+                slotObjes[1].GetComponent<SpriteRenderer>().sprite = slotSprites[0];
+                slotObjes[2].GetComponent<SpriteRenderer>().sprite = slotSprites[0];
+                slotObjes[3].GetComponent<SpriteRenderer>().sprite = slotSprites[0];
+
+                Vector3 centerPos = player.transform.position;
+
+                // 4 yönde pozisyonlar
+                Vector3[] spawnPositions = new Vector3[]
+                {
+            centerPos + new Vector3(0, 1, 0),   // Yukarý
+            centerPos + new Vector3(0, -1, 0),  // Aþaðý
+            centerPos + new Vector3(1, 0, 0),   // Saða
+            centerPos + new Vector3(-1, 0, 0)   // Sola
+                };
+
+                foreach (Vector3 spawnPos in spawnPositions)
+                {
+                    // Spawnla
+                    GameObject spawned = Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                    StartCoroutine(dest(spawned));
+
+                    // Karaktere doðru dönsün
+                    Vector3 direction = centerPos - spawnPos;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    spawned.transform.rotation = Quaternion.Euler(0, 0, angle);
+                }
+            }
+            else
+            {
+                Vector3 centerPos = player.transform.position;
+
+                // 4 yönde pozisyonlar
+                Vector3[] spawnPositions = new Vector3[]
+                {
+            centerPos + new Vector3(0, 1, 0),   // Yukarý
+            centerPos + new Vector3(0, -1, 0),  // Aþaðý
+            centerPos + new Vector3(1, 0, 0),   // Saða
+            centerPos + new Vector3(-1, 0, 0)   // Sola
+                };
+
+                foreach (Vector3 spawnPos in spawnPositions)
+                {
+                    // Spawnla
+                    GameObject spawned = Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                    StartCoroutine(dest(spawned));
+
+                    // Karaktere doðru dönsün
+                    Vector3 direction = centerPos - spawnPos;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                    spawned.transform.rotation = Quaternion.Euler(0, 0, angle);
+                }
+            }
+        }
+        StartCoroutine(durat(slotObjes[0]));
 
     }
 
     public void PlayMineFarm()
     {
-        Debug.Log("Farm Baï¿½lsï¿½n");
+        Mine.SetActive(true);
+        Debug.Log("Farm");
         SetUpMineObjs();
         SetUpMineFarm();
     }
@@ -125,16 +282,27 @@ public class bossSkills : MonoBehaviour
                 if (i == col && j == sel)
                 {
                     mineFarm[i, j] = 0;
-                    mineFarmObj[i, j].GetComponent<MineAreas>().var = 0; 
+                    mineFarmObj[i, j].GetComponent<MineAreas>().var = 0;
+                    mineFarmObj[i, j].GetComponent<SpriteRenderer>().sprite = minedef;
                 }
                 else
                 {
                     mineFarm[i, j] = 1;
                     mineFarmObj[i, j].GetComponent<MineAreas>().var = 1;
+                    mineFarmObj[i, j].GetComponent<SpriteRenderer>().sprite = minedef;
                 }
 
             }
         }
     }
-
+    IEnumerator durat(GameObject o)
+    {
+        yield return new WaitForSeconds(1f);
+        o.SetActive(false);
+    }
+    IEnumerator dest(GameObject o)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(o);
+    }
 }
