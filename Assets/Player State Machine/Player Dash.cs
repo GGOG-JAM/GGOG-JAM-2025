@@ -51,12 +51,13 @@ public class PlayerDash : BaseMovementState
         {
             PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
         }
-        else if (isDashAgain)
+        else if (isDashAgain)   
         {
             PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
         }
         else
         {
+            Debug.Log("A");
             PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
         }
     }
