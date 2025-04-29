@@ -70,7 +70,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Update()
     {
-
         currentState.OnStateUpdate();
         playerAnimator.SetFloat("Movement X", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.x);
         playerAnimator.SetFloat("Movement Y", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.y);

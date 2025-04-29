@@ -29,4 +29,9 @@ public class PlayerInputManager : MonoBehaviour
             playerInput.Player.Movement.canceled += i => { Debug.Log("canceled"); };
         }
     }
+
+    private void Update()
+    {
+        
+    }
 }

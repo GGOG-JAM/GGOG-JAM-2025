@@ -20,7 +20,8 @@ public class PlayerSwordAttack1 : BaseMovementState
 
     public override void OnStateUpdate()
     {
-        if(timer < PlayerStateMachine.instance.swordattack1Time)
+        base.OnStateUpdate();
+        if (timer < PlayerStateMachine.instance.swordattack1Time)
         {
             timer += Time.deltaTime;
         }
@@ -32,7 +33,7 @@ public class PlayerSwordAttack1 : BaseMovementState
             }
             else
             {
-                if (PlayerInputManager.instance.playerInput.Player.Dash.IsPressed() && PlayerStateMachine.instance.canDash)
+                if (PlayerInputManager.instance.playerInput.Player.Dash.IsPressed())
                 {
                     PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
                 }
