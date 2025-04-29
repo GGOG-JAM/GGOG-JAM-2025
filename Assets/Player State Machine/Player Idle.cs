@@ -10,6 +10,9 @@ public class PlayerIdle : BaseMovementState
 
     public override void OnStateEnter()
     {
+        //This is Reset The Movement Trigger For Instant Transitions 
+        PlayerStateMachine.instance.playerAnimator.ResetTrigger("Movement");
+
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Idle");
         onMove = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
         PlayerInputManager.instance.playerInput.Player.Movement.started += onMove;
