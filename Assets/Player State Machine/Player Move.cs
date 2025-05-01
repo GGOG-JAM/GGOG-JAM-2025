@@ -12,10 +12,9 @@ public class PlayerMove : BaseMovementState
     private System.Action<InputAction.CallbackContext> onDash;
     private System.Action<InputAction.CallbackContext> onAttack;
 
-
-    //Bug:Dashten Move Statetine geçerken Movement inputunun canceled olup olmamasýna bakmadýðý için transition süresinde canceled olsa bile Idle statine geçmiyor
     public override void OnStateEnter()
     {
+
         PlayerStateMachine.instance.playerAnimator.SetTrigger("Movement");
 
         rb = PlayerStateMachine.instance.rb;
@@ -29,6 +28,7 @@ public class PlayerMove : BaseMovementState
 
         onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
         PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
+
     }
     private void MoveToDirection(Vector2 direction)
     {
@@ -60,8 +60,11 @@ public class PlayerMove : BaseMovementState
 
     public override void OnStateExit()
     {
+
         PlayerInputManager.instance.playerInput.Player.Movement.canceled -= onIdle;
+
         PlayerInputManager.instance.playerInput.Player.Dash.performed -= onDash;
+
         PlayerInputManager.instance.playerInput.Player.Attack.performed -= onAttack;
     }
 

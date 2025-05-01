@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq.Expressions;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
@@ -18,6 +19,7 @@ public class PlayerStateMachine : MonoBehaviour
     [HideInInspector] public Vector2 dashDirection;
     [HideInInspector] public bool canDash;
     public float timeBeforeNextDash;
+    [HideInInspector] public bool isDashing;
 
 
     [Header("Sword Combo States")]
@@ -32,7 +34,9 @@ public class PlayerStateMachine : MonoBehaviour
     [Header("Smoke Object References")]
     public GameObject smokeObject;
     public float smokeObjectVelocity;
-    
+
+    [Header("Damaged State")]
+    public float timeBeforeMoveAfterDamaged;
 
     private void Awake()
     {
@@ -50,15 +54,15 @@ public class PlayerStateMachine : MonoBehaviour
         playerAnimator = GetComponentInChildren<Animator>();
 
         canDash = true;
+        isDashing = false;
 
         
     }
 
     private void Start()
     {
-        //Buranýn Nasýl Çalýþtýðýný Bilmiyorum.Movement Set Trigger Yapmazsam Bozuk Çalýþýyor
         ChangeCurrentState(new PlayerIdle());
-        playerAnimator.SetTrigger("Movement");
+        playerAnimator.ResetTrigger("Idle");
     }
 
     public void ChangeCurrentState(BaseMovementState state)
@@ -73,7 +77,6 @@ public class PlayerStateMachine : MonoBehaviour
         currentState.OnStateUpdate();
         playerAnimator.SetFloat("Movement X", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.x);
         playerAnimator.SetFloat("Movement Y", PlayerInputManager.instance.playerInput.Player.Movement.ReadValue<Vector2>().normalized.y);
-        Debug.Log(currentState.ToString());
 
 
     }
@@ -100,5 +103,13 @@ public class PlayerStateMachine : MonoBehaviour
     private void FixedUpdate()
     {
         currentState.OnStateFixedUpdate();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Enemy" && !isDashing)
+        {
+            ChangeCurrentState(new PlayerDamaged());
+        }
     }
 }

@@ -18,15 +18,17 @@ public class PlayerDash : BaseMovementState
     public override void OnStateEnter()
     {
             PlayerStateMachine.instance.playerAnimator.SetTrigger("Dash");
-        
-            
+
             onDashAgain =  i => isDashAgain = true;
             PlayerInputManager.instance.playerInput.Player.Dash.performed += onDashAgain;
 
             onAttack = i => PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
             PlayerInputManager.instance.playerInput.Player.Attack.performed += onAttack;
 
+            PlayerStateMachine.instance.isDashing = true;
             Dash(currentDirection);
+
+
         
     }
     private void Dash(Vector2 direction)
@@ -57,15 +59,20 @@ public class PlayerDash : BaseMovementState
         }
         else
         {
-            Debug.Log("A");
             PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
         }
     }
 
     public override void OnStateExit()
     {
+
         PlayerInputManager.instance.playerInput.Player.Attack.performed -= onAttack;
+
         PlayerInputManager.instance.playerInput.Player.Dash.performed -= onDashAgain;
+
+
         PlayerStateMachine.instance.canDash = false;
+
+        PlayerStateMachine.instance.isDashing = false;
     }
 }

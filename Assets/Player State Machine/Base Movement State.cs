@@ -1,10 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public abstract class BaseMovementState
 {
     public virtual void OnStateEnter()
     {
-
     }
 
     public virtual void OnStateUpdate()
@@ -19,7 +20,6 @@ public abstract class BaseMovementState
     }
     public virtual void OnStateExit()
     {
-
     }
 
     public void ChangeAttackColliderDirection(ref Transform transform,Vector2 direction)
@@ -51,5 +51,28 @@ public abstract class BaseMovementState
 
 
 
+    //Get To Any State From A State When Button Pressed.If Any Button Pressed Then Switch To The Idle State
+    public void GetToAnyState()
+    {
+        if(PlayerInputManager.instance.playerInput.Player.Movement.IsPressed())
+        {
+            PlayerStateMachine.instance.ChangeCurrentState(new PlayerMove());
+        }
+
+        else if (PlayerInputManager.instance.playerInput.Player.Dash.IsPressed())
+        {
+            PlayerStateMachine.instance.ChangeCurrentState(new PlayerDash(PlayerStateMachine.instance.dashDirection));
+        }
+
+        else if(PlayerInputManager.instance.playerInput.Player.Attack.IsPressed())
+        {
+            PlayerStateMachine.instance.ChangeCurrentState(new PlayerSwordAttack1());
+        }
+
+        else
+        {
+            PlayerStateMachine.instance.ChangeCurrentState(new PlayerIdle());
+        }
+    }
 
 }
