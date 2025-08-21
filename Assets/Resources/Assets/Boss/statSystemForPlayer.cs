@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class statSystemForPlayer : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class statSystemForPlayer : MonoBehaviour
     bossSkills bs;
 
     public float currentHp, maxHp;
+    float percent;
     private float prevHp;
     public int handler = 0;
 
@@ -17,6 +19,8 @@ public class statSystemForPlayer : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     Material material;
+
+    public Image healtBar;
 
     void Start()
     {
@@ -36,6 +40,11 @@ public class statSystemForPlayer : MonoBehaviour
     private void Update()
     {
         isHpChange();
+
+        percent = currentHp * 100 / maxHp;
+        float v = 10 * (percent) / 100;
+        Vector3 targetScale = new Vector3(v, 0.4f, 1f);
+        healtBar.rectTransform.localScale = targetScale;
     }
 
     void isHpChange()
@@ -52,6 +61,8 @@ public class statSystemForPlayer : MonoBehaviour
         if (currentHp <= 0)
         {
             KillPlayer();
+            UIManager.Instance.ActivateDeadPanel();
+            Time.timeScale = 0;
         }
     }
 
